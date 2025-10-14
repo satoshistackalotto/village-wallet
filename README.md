@@ -7,8 +7,8 @@
 Tap-to-pay with crypto. PIN-protected. Multi-network. MetaMask compatible.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Downloads](https://img.shields.io/github/downloads/yourusername/village-wallet/total)](https://github.com/satoshistackalotto/village-wallet/releases)
-[![Stars](https://img.shields.io/github/stars/yourusername/village-wallet)](https://github.com/satoshistackalotto/village-wallet/stargazers)
+[![Downloads](https://img.shields.io/github/downloads/satoshistackalotto/village-wallet/total)](https://github.com/satoshistackalotto/village-wallet/releases)
+[![Stars](https://img.shields.io/github/stars/satoshistackalotto/village-wallet)](https://github.com/satoshistackalotto/village-wallet/stargazers)
 
 ---
 
@@ -53,7 +53,7 @@ Village Wallet turns any NFC card into a secure crypto wallet. It's like a hardw
 
 ```bash
 # Clone the repo
-git clone https://github.com/yourusername/village-wallet.git
+git clone https://github.com/satoshistackalotto/village-wallet.git
 cd village-wallet
 
 # Install dependencies
