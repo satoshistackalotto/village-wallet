@@ -1,1 +1,30 @@
 
+# React Native
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Android
+*.apk
+*.aab
+android/app/build/
+android/.gradle/
+android/local.properties
+
+# iOS
+ios/Pods/
+ios/build/
+
+# Environment
+.env
+.env.local
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
