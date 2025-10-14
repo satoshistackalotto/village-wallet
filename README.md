@@ -7,8 +7,8 @@
 Tap-to-pay with crypto. PIN-protected. Multi-network. MetaMask compatible.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Downloads](https://img.shields.io/github/downloads/yourusername/village-wallet/total)](https://github.com/yourusername/village-wallet/releases)
-[![Stars](https://img.shields.io/github/stars/yourusername/village-wallet)](https://github.com/yourusername/village-wallet/stargazers)
+[![Downloads](https://img.shields.io/github/downloads/yourusername/village-wallet/total)](https://github.com/satoshistackalotto/village-wallet/releases)
+[![Stars](https://img.shields.io/github/stars/yourusername/village-wallet)](https://github.com/satoshistackalotto/village-wallet/stargazers)
 
 ---
 
@@ -31,11 +31,11 @@ Village Wallet turns any NFC card into a secure crypto wallet. It's like a hardw
 ### For Users (Just want to use it)
 
 1. **Download the app**
-   - [Android APK](https://github.com/yourusername/village-wallet/releases/latest)
+   - [Android APK](https://github.com/satoshistackalotto/village-wallet/releases/latest)
    - iOS: Coming soon
 
 2. **Generate a wallet**
-   - Open our [Card Generator](https://villagewallet.com/generator) (runs offline)
+   - Open our [Card Generator] - coming soon (runs offline)
    - Enter card number and PIN
    - **Save your private key!** (for MetaMask backup)
 
@@ -150,7 +150,7 @@ We welcome security researchers to audit our code. Found a vulnerability? Please
 {
   "v": "1.0",
   "net": "ethereum",
-  "addr": "0x742d35Cc6634C0532925a3b844Bc9e7595f0bEb",
+  "addr": "0x742d35Cc6634C0n485urifd8374jfma02kf0ndg",
   "ekey": "U2FsdGVkX1+vupppqqWvj3mbjPXYq...",
   "serial": "VLG-001",
   "ens": "user.village.eth"
@@ -174,8 +174,8 @@ Full spec: [NFC Format Specification](docs/NFC-FORMAT-SPEC.md)
 
 ## 📚 Documentation
 
-- [User Guide](https://villagewallet.com/docs) - How to use Village Wallet
-- [FAQ](https://villagewallet.com/faq) - Common questions
+- [User Guide](https://village-wallet.com/docs) - How to use Village Wallet
+- [FAQ](https://village-wallet.com/faq) - Common questions
 - [Fork Guide](docs/FORK-GUIDE.md) - Customize for your needs
 - [NFC Spec](docs/NFC-FORMAT-SPEC.md) - Card format details
 - [API Docs](docs/API.md) - For developers
