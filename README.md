@@ -66,7 +66,7 @@ npx react-native run-android
 cd android && ./gradlew assembleRelease
 ```
 
-See [Fork Guide](docs/FORK-GUIDE.md) for detailed customization instructions.
+See [Fork Guide](https://github.com/satoshistackalotto/village-wallet/blob/main/village%20wallet%20files/docs/Fork%20Guide.md) for detailed customization instructions.
 
 ---
 
@@ -157,7 +157,7 @@ We welcome security researchers to audit our code. Found a vulnerability? Please
 }
 ```
 
-Full spec: [NFC Format Specification](docs/NFC-FORMAT-SPEC.md)
+Full spec: [NFC Format Specification](https://github.com/satoshistackalotto/village-wallet/blob/main/village%20wallet%20files/docs/Fork%20Guide.md)
 
 ### Encryption
 - **Algorithm:** AES-256-CBC (via CryptoJS)
@@ -176,9 +176,9 @@ Full spec: [NFC Format Specification](docs/NFC-FORMAT-SPEC.md)
 
 - [User Guide](https://village-wallet.com/docs) - How to use Village Wallet
 - [FAQ](https://village-wallet.com/faq) - Common questions
-- [Fork Guide](docs/FORK-GUIDE.md) - Customize for your needs
-- [NFC Spec](docs/NFC-FORMAT-SPEC.md) - Card format details
-- [API Docs](docs/API.md) - For developers
+- [Fork Guide](village-wallet-files/docs/FORK-GUIDE.md) - Customize for your needs
+- [NFC Spec](village-wallet-files/docs/NFC-FORMAT-SPEC.md) - Card format details
+- [API Docs](village-wallet-files/docs/API.md) - For developers
 
 ---
 
