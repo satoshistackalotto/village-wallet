@@ -174,9 +174,9 @@ Full spec: [NFC Format Specification](https://github.com/satoshistackalotto/vill
 
 ## 📚 Documentation
 
-- [User Guide](https://village-wallet.com/docs) - How to use Village Wallet
-- [FAQ](https://village-wallet.com/faq) - Common questions
-- [Fork Guide](village-wallet-files/docs/FORK-GUIDE.md) - Customize for your needs
+- [User Guide]([https://village-wallet.com/docs](https://village-wallet.netlify.app/docs)) - How to use Village Wallet
+- [FAQ](https://village-wallet.netlify.app/faq) - Common questions
+- [Fork Guide](village-wallet/village-wallet-files/docs/FORK-GUIDE.md) - Customize for your needs
 - [NFC Spec](village-wallet-files/docs/NFC-FORMAT-SPEC.md) - Card format details
 - [API Docs](village-wallet-files/docs/API.md) - For developers
 
