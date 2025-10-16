@@ -2,9 +2,12 @@
 
 > A beautiful, multi-network crypto wallet with NFC card support
 
-[![Version](https://img.shields.io/badge/version-2.0-blue.svg)](https://github.com/yourusername/VillageWallet)
+[![Version](https://img.shields.io/badge/version-2.0-blue.svg)](https://github.com/satoshistackalotto/VillageWallet)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 [![React Native](https://img.shields.io/badge/React%20Native-0.72-61dafb.svg)](https://reactnative.dev/)
+[![Downloads](https://img.shields.io/github/downloads/satoshistackalotto/village-wallet/total)](https://github.com/satoshistackalotto/village-wallet/releases)
+[![Stars](https://img.shields.io/github/stars/satoshistackalotto/village-wallet)](https://github.com/satoshistackalotto/village-wallet/stargazers)
+
 
 ## ✨ Features
 
