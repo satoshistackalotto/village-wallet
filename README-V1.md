@@ -35,7 +35,7 @@ Village Wallet turns any NFC card into a secure crypto wallet. It's like a hardw
    - iOS: Coming soon
 
 2. **Generate a wallet**
-   - Open our [Card Generator](https://village-wallet.netlify.app/generator) (runs offline)
+   - Open our [Card Generator](https://village-wallet.com/generator.html) (runs offline)
    - Enter card number and PIN
    - **Save your private key!** (for MetaMask backup)
 
@@ -286,10 +286,10 @@ Inspired by:
 
 ## 📞 Contact & Community
 
-- 🌐 **Website:** 
-- 💬 **Discord:** 
-- 🐦 **Twitter:** 
-- 📧 **Email:** 
+- 🌐 **Website:** [village wallet](https://village-wallet.com)
+- 💬 **Discord:** [village wallet](https://discord.com/channels/1427941983544147980)
+- 🐦 **Twitter:** [@stack_lotto](https://x.com/stack_lotto)
+- 📧 **Email:** [email:to](support@village-wallet.com)
 - 🐛 **Issues:** [GitHub Issues](https://github.com/satoshistackalotto/village-wallet/issues)
 
 ---
