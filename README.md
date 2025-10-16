@@ -316,7 +316,7 @@ Full specification: [NFC Format Specification](https://github.com/satoshistackal
 
 ### Security Audit
 
-We welcome security researchers to audit our code. Found a vulnerability? Please email: security@villagewallet.com
+We welcome security researchers to audit our code. Found a vulnerability? Please email: security@village-wallet.com
 
 ### What We Guarantee
 
