@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Village Wallet - FAQ</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: system-ui, -apple-system, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f5f5f5;
+        }
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+        .header h1 { font-size: 36px; margin-bottom: 10px; }
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+        .faq-item {
+            background: white;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        .faq-question {
+            padding: 20px;
+            font-weight: 600;
+            font-size: 18px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: white;
+            border: none;
+            width: 100%;
+            text-align: left;
+            transition: background 0.3s;
+        }
+        .faq-question:hover {
+            background: #f8f9fa;
+        }
+        .faq-question::after {
+            content: '+';
+            font-size: 24px;
+            color: #667eea;
+        }
+        .faq-question.active::after {
+            content: '−';
+        }
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+            padding: 0 20px;
+        }
+        .faq-answer.active {
+            max-height: 1000px;
+            padding: 0 20px 20px 20px;
+        }
+        .faq-answer p {
+            margin-bottom: 10px;
+        }
+        .faq-answer ul {
+            margin-left: 20px;
+            margin-bottom: 10px;
+        }
+        .faq-answer li {
+            margin-bottom: 5px;
+        }
+        .category {
+            font-size: 24px;
+            font-weight: bold;
+            color: #667eea;
+            margin: 40px 0 20px 0;
+        }
+        .important-box {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 4px;
+        }
+        .success-box {
+            background: #d4edda;
+            border-left: 4px solid #28a745;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 4px;
+        }
+        code {
+            background: #f4f4f4;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: monospace;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>🏘️ Village Wallet FAQ</h1>
+        <p>Everything you need to know about Village Wallet cards</p>
+    </div>
+
+    <div class="container">
+        <!-- GETTING STARTED -->
+        <div class="category">🚀 Getting Started</div>
+
+        <div class="faq-item">
+            <button class="faq-question">What is Village Wallet?</button>
+            <div class="faq-answer">
+                <p>Village Wallet is a physical NFC card that stores cryptocurrency. It works like a tap-to-pay card, but for Ethereum, Polygon, and Arbitrum. Each card contains an encrypted wallet that you control with a PIN.</p>
+                <p><strong>Key features:</strong></p>
+                <ul>
+                    <li>Tap your phone to check balance</li>
+                    <li>Enter PIN to authorize payments</li>
+                    <li>Works on multiple networks</li>
+                    <li>Can import to MetaMask</li>
+                    <li>Open-source security</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">How do I get started?</button>
+            <div class="faq-answer">
+                <ol>
+                    <li><strong>Get a Village Wallet card</strong> - Order from our website or Etsy</li>
+                    <li><strong>Download the app</strong> - Available for Android</li>
+                    <li><strong>Load funds</strong> - Send crypto to your card's address</li>
+                    <li><strong>Tap to pay</strong> - Use the app to authorize payments</li>
+                </ol>
+                <p>See our <a href="/setup">Setup Guide</a> for detailed instructions.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">What do I need to use Village Wallet?</button>
+            <div class="faq-answer">
+                <p><strong>You need:</strong></p>
+                <ul>
+                    <li>A Village Wallet NFC card</li>
+                    <li>Android phone with NFC</li>
+                    <li>Village Wallet app (free download)</li>
+                    <li>Your PIN (included with card)</li>
+                </ul>
+                <p><strong>Optional:</strong></p>
+                <ul>
+                    <li>MetaMask or other wallet (for advanced features)</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- SECURITY -->
+        <div class="category">🔒 Security</div>
+
+        <div class="faq-item">
+            <button class="faq-question">How secure is my Village Wallet?</button>
+            <div class="faq-answer">
+                <p>Very secure! Your wallet uses multiple layers of protection:</p>
+                <ul>
+                    <li><strong>Encrypted private key</strong> - Uses AES-256 encryption</li>
+                    <li><strong>PIN protection</strong> - Your 4-6 digit PIN is required to spend</li>
+                    <li><strong>Physical security</strong> - Scratch-off protects printed key</li>
+                    <li><strong>No servers</strong> - Your keys never leave your device</li>
+                    <li><strong>Open source</strong> - Code is publicly auditable</li>
+                </ul>
+                <div class="important-box">
+                    ⚠️ <strong>Important:</strong> Keep your PIN secret and never share your private key!
+                </div>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">What if I lose my card?</button>
+            <div class="faq-answer">
+                <p>If you lose your card:</p>
+                <ol>
+                    <li><strong>Don't panic</strong> - Your funds are safe if no one knows your PIN</li>
+                    <li><strong>Import to MetaMask</strong> - If you backed up your private key</li>
+                    <li><strong>Transfer funds</strong> - Move to a new wallet immediately</li>
+                </ol>
+                <div class="important-box">
+                    💡 <strong>Prevention:</strong> Back up your private key (scratch off card back and use our decryption tool) and store it securely offline.
+                </div>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">Can someone steal my funds if they find my card?</button>
+            <div class="faq-answer">
+                <p><strong>No</strong> - if they don't have your PIN.</p>
+                <p>The private key on your card is encrypted. Without your PIN, they cannot decrypt it or spend your funds. However:</p>
+                <div class="important-box">
+                    ⚠️ If someone has both your card AND your PIN, they can access your funds. Keep your PIN separate and secret!
+                </div>
+                <p><strong>Best practices:</strong></p>
+                <ul>
+                    <li>Don't write your PIN on the card</li>
+                    <li>Don't store PIN and card together</li>
+                    <li>Don't scratch off the private key unless backing up</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- USING THE WALLET -->
+        <div class="category">💳 Using Your Wallet</div>
+
+        <div class="faq-item">
+            <button class="faq-question">How do I check my balance?</button>
+            <div class="faq-answer">
+                <ol>
+                    <li>Open Village Wallet app</li>
+                    <li>Tap "Check Balance"</li>
+                    <li>Hold your card on the back of your phone</li>
+                    <li>Your balance appears (no PIN needed!)</li>
+                </ol>
+                <p>You can check balance without entering your PIN.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">How do I receive crypto?</button>
+            <div class="faq-answer">
+                <p>Two easy ways:</p>
+                <p><strong>Method 1: Share your address</strong></p>
+                <ol>
+                    <li>Look at the front of your card</li>
+                    <li>Share your public address (0x...)</li>
+                    <li>Or let someone scan the QR code</li>
+                </ol>
+                <p><strong>Method 2: Use the app</strong></p>
+                <ol>
+                    <li>Open Village Wallet app</li>
+                    <li>Tap "Check Balance"</li>
+                    <li>Tap your card</li>
+                    <li>Share the address shown</li>
+                </ol>
+                <div class="success-box">
+                    ✅ Your public address is safe to share with anyone!
+                </div>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">How do I send/spend crypto?</button>
+            <div class="faq-answer">
+                <p><strong>To pay a merchant with Village Wallet:</strong></p>
+                <ol>
+                    <li>Merchant opens their Village Wallet app</li>
+                    <li>Merchant sets payment amount</li>
+                    <li>You tap your card on their phone</li>
+                    <li>Enter your PIN</li>
+                    <li>Payment sent! ✅</li>
+                </ol>
+                <p><strong>To send to any address:</strong></p>
+                <ol>
+                    <li>Import your wallet to MetaMask (see below)</li>
+                    <li>Use MetaMask to send to any address</li>
+                </ol>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">Which networks does Village Wallet support?</button>
+            <div class="faq-answer">
+                <p>Your Village Wallet works on:</p>
+                <ul>
+                    <li><strong>Ethereum</strong> - Main network (ETH)</li>
+                    <li><strong>Polygon</strong> - Low fees (MATIC)</li>
+                    <li><strong>Arbitrum</strong> - Layer 2 (ETH)</li>
+                </ul>
+                <p>Your card address is the same on all networks! You can hold different balances on each network.</p>
+                <p><em>Example: You might have 0.1 ETH on Ethereum and 10 MATIC on Polygon.</em></p>
+            </div>
+        </div>
+
+        <!-- METAMASK INTEGRATION -->
+        <div class="category">🦊 MetaMask Integration</div>
+
+        <div class="faq-item">
+            <button class="faq-question">Can I use my Village Wallet with MetaMask?</button>
+            <div class="faq-answer">
+                <p><strong>Yes!</strong> You can import your Village Wallet into MetaMask or any other Ethereum wallet.</p>
+                <p>This gives you full wallet functionality:</p>
+                <ul>
+                    <li>Send to any address</li>
+                    <li>Use DeFi apps</li>
+                    <li>Swap tokens</li>
+                    <li>Connect to dApps</li>
+                </ul>
+                <p>See our <a href="/decrypt">Decryption Tool</a> to get your private key for import.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">How do I import to MetaMask?</button>
+            <div class="faq-answer">
+                <ol>
+                    <li><strong>Scratch off</strong> the back of your card</li>
+                    <li><strong>Go to</strong> <a href="/decrypt">village-wallet.com/decrypt</a></li>
+                    <li><strong>Enter:</strong>
+                        <ul>
+                            <li>Encrypted private key (from card)</li>
+                            <li>Your PIN</li>
+                            <li>Card serial number</li>
+                        </ul>
+                    </li>
+                    <li><strong>Copy</strong> your decrypted private key</li>
+                    <li><strong>Open MetaMask</strong> → Import Account</li>
+                    <li><strong>Paste</strong> your private key</li>
+                    <li><strong>Done!</strong> Your wallet is now in MetaMask</li>
+                </ol>
+                <div class="important-box">
+                    ⚠️ After importing to MetaMask, your card still works! Both can access the same wallet.
+                </div>
+            </div>
+        </div>
+
+        <!-- TECHNICAL -->
+        <div class="category">🔧 Technical Questions</div>
+
+        <div class="faq-item">
+            <button class="faq-question">What's on my NFC card?</button>
+            <div class="faq-answer">
+                <p>Your card contains a small JSON file with:</p>
+                <ul>
+                    <li>Your public Ethereum address</li>
+                    <li>Your encrypted private key</li>
+                    <li>Card serial number</li>
+                    <li>Network information</li>
+                </ul>
+                <p>The private key is encrypted with your PIN, so it's safe even if someone reads the NFC chip.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">Can I reuse my Village Wallet card?</button>
+            <div class="faq-answer">
+                <p><strong>Yes!</strong> Your Village Wallet is reusable:</p>
+                <ul>
+                    <li>Top up as many times as you want</li>
+                    <li>Use for multiple transactions</li>
+                    <li>Works indefinitely</li>
+                </ul>
+                <p><strong>However:</strong> Once you scratch off the private key and import to another wallet, consider the physical card "exposed" for security. You can still use it, but your private key is no longer secret.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">Do you store my private keys?</button>
+            <div class="faq-answer">
+                <p><strong>No!</strong> We never see or store your private keys.</p>
+                <p>Here's how it works:</p>
+                <ol>
+                    <li>Wallets are generated <strong>offline</strong></li>
+                    <li>Private keys are <strong>encrypted immediately</strong></li>
+                    <li>Only you have the PIN to decrypt</li>
+                    <li>Keys are written directly to your card</li>
+                    <li>We delete all data after production</li>
+                </ol>
+                <div class="success-box">
+                    ✅ <strong>You are the only one who can access your funds.</strong> This is true non-custodial ownership!
+                </div>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">What if I forget my PIN?</button>
+            <div class="faq-answer">
+                <p><strong>Unfortunately, there's no way to recover a forgotten PIN.</strong></p>
+                <p>This is by design for security. However, you have options:</p>
+                <ul>
+                    <li><strong>If you haven't scratched the card:</strong> Contact us with proof of purchase for a replacement card</li>
+                    <li><strong>If you have a backup:</strong> Import your private key to a new wallet</li>
+                </ul>
+                <div class="important-box">
+                    💡 <strong>Tip:</strong> Write down your PIN and store it securely (not with your card)!
+                </div>
+            </div>
+        </div>
+
+        <!-- TROUBLESHOOTING -->
+        <div class="category">🛠️ Troubleshooting</div>
+
+        <div class="faq-item">
+            <button class="faq-question">My phone won't read my card. What do I do?</button>
+            <div class="faq-answer">
+                <p>Try these steps:</p>
+                <ol>
+                    <li><strong>Enable NFC</strong> - Settings → Connected devices → NFC (turn ON)</li>
+                    <li><strong>Remove phone case</strong> - Cases can block NFC</li>
+                    <li><strong>Hold card steady</strong> - On the back center of phone for 3-5 seconds</li>
+                    <li><strong>Try different position</strong> - NFC antenna location varies by phone</li>
+                    <li><strong>Restart app</strong> - Close and reopen Village Wallet</li>
+                </ol>
+                <p><strong>Still not working?</strong></p>
+                <ul>
+                    <li>Test with another NFC app (like "NFC Tools")</li>
+                    <li>Try on a different phone</li>
+                    <li>Contact support if card is defective</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">App says "Invalid PIN" but I'm sure it's correct</button>
+            <div class="faq-answer">
+                <p>Check these common issues:</p>
+                <ul>
+                    <li><strong>Wrong card</strong> - Make sure you're using the right card for that PIN</li>
+                    <li><strong>Typo</strong> - PINs are case-sensitive (though usually numeric)</li>
+                    <li><strong>Card serial</strong> - Verify the serial number matches</li>
+                </ul>
+                <p>If none of these work, try using the <a href="/decrypt">decryption tool</a> on our website to verify your PIN.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">Transaction failed - what happened?</button>
+            <div class="faq-answer">
+                <p>Common reasons transactions fail:</p>
+                <ul>
+                    <li><strong>Insufficient funds</strong> - Don't forget about gas fees!</li>
+                    <li><strong>Network congestion</strong> - Try again in a few minutes</li>
+                    <li><strong>Gas price too low</strong> - App should handle this, but try different network</li>
+                    <li><strong>Internet connection</strong> - Need stable connection to broadcast</li>
+                </ul>
+                <p>The app will show you exactly what went wrong in the error message.</p>
+            </div>
+        </div>
+
+        <!-- PURCHASING -->
+        <div class="category">🛒 Purchasing & Support</div>
+
+        <div class="faq-item">
+            <button class="faq-question">Where can I buy a Village Wallet card?</button>
+            <div class="faq-answer">
+                <p>Available from:</p>
+                <ul>
+                    <li><a href="/buy">Our website</a></li>
+                    <li><a href="#">Etsy shop</a></li>
+                    <li><a href="#">eBay store</a></li>
+                </ul>
+                <p><strong>Prices:</strong></p>
+                <ul>
+                    <li>Basic card: $15-20</li>
+                    <li>With ENS subdomain: $25-30 (coming soon)</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">Do cards come with crypto loaded?</button>
+            <div class="faq-answer">
+                <p><strong>No</strong> - cards arrive with a zero balance.</p>
+                <p>This is for security reasons:</p>
+                <ul>
+                    <li>We never control your funds</li>
+                    <li>You choose which network to use</li>
+                    <li>You control when to load funds</li>
+                </ul>
+                <p>After receiving your card, simply send crypto to the address on the front!</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">How do I contact support?</button>
+            <div class="faq-answer">
+                <p>We're here to help!</p>
+                <ul>
+                    <li><strong>Email:</strong> support@village-wallet.com</li>
+                    <li><strong>Discord:</strong> [Your Discord server]</li>
+                    <li><strong>GitHub:</strong> [Your GitHub repo] (for technical issues)</li>
+                </ul>
+                <p>Response time: Usually within 24 hours</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">Is there an iOS app?</button>
+            <div class="faq-answer">
+                <p><strong>Coming soon!</strong></p>
+                <p>Currently available for Android only. iOS version is in development.</p>
+                <p>In the meantime, iOS users can:</p>
+                <ul>
+                    <li>Import wallet to MetaMask on iPhone</li>
+                    <li>Use the card with Android merchant terminals</li>
+                    <li>Check balance via blockchain explorers</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- FOOTER -->
+        <div style="text-align: center; margin: 60px 0 40px 0; padding: 40px 20px; background: white; border-radius: 8px;">
+            <h2 style="color: #667eea; margin-bottom: 15px;">Still have questions?</h2>
+            <p style="margin-bottom: 20px;">We're happy to help! Contact us at support@village-wallet.com</p>
+            <p style="font-size: 14px; color: #666;">
+                <a href="/">Home</a> • 
+                <a href="/setup">Setup Guide</a> • 
+                <a href="/decrypt">Decrypt Tool</a> • 
+                <a href="/buy">Buy Cards</a>
+            </p>
+        </div>
+    </div>
+
+    <script>
+        // FAQ accordion functionality
+        document.querySelectorAll('.faq-question').forEach(button => {
+            button.addEventListener('click', () => {
+                const wasActive = button.classList.contains('active');
+                
+                // Close all FAQs
+                document.querySelectorAll('.faq-question').forEach(btn => {
+                    btn.classList.remove('active');
+                    btn.nextElementSibling.classList.remove('active');
+                });
+                
+                // Open clicked FAQ if it wasn't already open
+                if (!wasActive) {
+                    button.classList.add('active');
+                    button.nextElementSibling.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

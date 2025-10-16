@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Village Wallet Generator</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: system-ui, -apple-system, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+        .header h1 { font-size: 28px; margin-bottom: 10px; }
+        .warning {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 15px;
+            margin: 20px;
+            border-radius: 5px;
+            color: #856404;
+        }
+        .content { padding: 30px; }
+        .section { margin-bottom: 30px; }
+        .section h2 { color: #667eea; margin-bottom: 15px; font-size: 20px; }
+        .input-group { margin-bottom: 20px; }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #333;
+        }
+        input[type="text"], input[type="number"] {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 14px;
+        }
+        input:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+        .btn {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            width: 100%;
+        }
+        .btn:hover { opacity: 0.9; }
+        .result-box {
+            background: #f8f9fa;
+            border: 2px solid #667eea;
+            border-radius: 8px;
+            padding: 20px;
+            margin-top: 20px;
+            display: none;
+        }
+        .result-box.show { display: block; }
+        .result-item { margin-bottom: 20px; }
+        .result-label {
+            font-weight: 600;
+            color: #667eea;
+            margin-bottom: 5px;
+            font-size: 14px;
+        }
+        .result-value {
+            background: white;
+            padding: 10px;
+            border-radius: 5px;
+            font-family: monospace;
+            font-size: 12px;
+            word-break: break-all;
+            border: 1px solid #e0e0e0;
+        }
+        .json-output {
+            background: #282c34;
+            color: #abb2bf;
+            padding: 15px;
+            border-radius: 8px;
+            font-family: monospace;
+            font-size: 12px;
+            overflow-x: auto;
+            white-space: pre-wrap;
+        }
+        .copy-btn {
+            background: #28a745;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 5px;
+            font-size: 12px;
+            cursor: pointer;
+            margin-top: 5px;
+        }
+        .copy-btn:hover { background: #218838; }
+        .critical-warning {
+            background: #fff3cd;
+            border: 3px solid #ffc107;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        .critical-warning h3 {
+            color: #856404;
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+        .critical-warning ul {
+            margin-left: 20px;
+            color: #856404;
+        }
+        .critical-warning li {
+            margin-bottom: 8px;
+        }
+        small { color: #666; font-size: 12px; display: block; margin-top: 5px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🏘️ Village Wallet Generator</h1>
+            <p>Generate secure crypto wallets for NFC cards</p>
+        </div>
+        
+        <div class="warning">
+            <strong>⚠️ SECURITY:</strong> Disconnect from internet before generating. This tool runs 100% offline in your browser. Never share your PIN or private key.
+        </div>
+        
+        <div class="content">
+            <div class="section">
+                <h2>Generate New Wallet</h2>
+                
+                <div class="input-group">
+                    <label for="cardNumber">Card Number (e.g., 001, 002, 003):</label>
+                    <input type="text" id="cardNumber" placeholder="001" value="001">
+                    <small>This creates serial: VLG-001. Use unique numbers for each card.</small>
+                </div>
+                
+                <div class="input-group">
+                    <label for="userPin">User's PIN (4-6 digits):</label>
+                    <input type="text" id="userPin" placeholder="1234" maxlength="6">
+                    <small>User will enter this PIN in the app to spend funds</small>
+                </div>
+                
+                <div class="input-group">
+                    <label for="ensName">ENS Name (optional):</label>
+                    <input type="text" id="ensName" placeholder="user.village.eth">
+                </div>
+                
+                <button class="btn" onclick="generateWallet()">🎲 Generate Wallet</button>
+            </div>
+            
+            <div class="result-box" id="results">
+                <h2 style="color: #667eea; margin-bottom: 20px;">✅ Wallet Generated!</h2>
+                
+                <div class="result-item">
+                    <div class="result-label">Card Serial Number:</div>
+                    <div class="result-value" id="serialNumber"></div>
+                </div>
+                
+                <div class="result-item">
+                    <div class="result-label">Public Address (Safe to share):</div>
+                    <div class="result-value" id="publicAddress"></div>
+                    <button class="copy-btn" onclick="copyText('publicAddress')">📋 Copy</button>
+                </div>
+                
+                <div class="critical-warning">
+                    <h3>⚠️ CRITICAL: Save Your Private Key!</h3>
+                    <p style="margin-bottom: 10px; color: #856404;">
+                        <strong>This is your ONLY backup!</strong> You need this to:
+                    </p>
+                    <ul>
+                        <li><strong>Import to MetaMask</strong> or any Ethereum wallet</li>
+                        <li><strong>Recover funds</strong> if card is lost or damaged</li>
+                        <li><strong>Access funds</strong> from any device, anytime</li>
+                    </ul>
+                    <div class="result-value" id="privateKey" style="margin-top: 15px;"></div>
+                    <button class="copy-btn" onclick="copyText('privateKey')">📋 Copy Private Key</button>
+                    <p style="color: #721c24; font-weight: bold; margin-top: 15px; font-size: 14px;">
+                        ⚠️ NEVER SHARE THIS WITH ANYONE! Write it down and store it safely offline.
+                    </p>
+                </div>
+                
+                <div class="result-item">
+                    <div class="result-label">📖 How to Import to MetaMask:</div>
+                    <ol style="margin-left: 20px; font-size: 14px; color: #333; line-height: 1.8;">
+                        <li>Open MetaMask extension or app</li>
+                        <li>Click account icon → <strong>Import Account</strong></li>
+                        <li>Select <strong>"Private Key"</strong></li>
+                        <li>Paste your private key from above</li>
+                        <li>Click <strong>Import</strong></li>
+                        <li>Done! Your wallet is now in MetaMask ✅</li>
+                    </ol>
+                </div>
+                
+                <div class="result-item">
+                    <div class="result-label">Encrypted Private Key (Goes on card):</div>
+                    <div class="result-value" id="encryptedKey"></div>
+                    <button class="copy-btn" onclick="copyText('encryptedKey')">📋 Copy</button>
+                    <small>This encrypted version is safe to write on the card</small>
+                </div>
+                
+                <div class="result-item">
+                    <div class="result-label">🎯 NFC Card JSON (Copy this to NFC Tools):</div>
+                    <div class="json-output" id="nfcJson"></div>
+                    <button class="copy-btn" onclick="copyText('nfcJson')">📋 Copy JSON</button>
+                </div>
+                
+                <div class="warning" style="margin-top: 20px;">
+                    <strong>📝 Next Steps:</strong><br>
+                    1. <strong>SAVE YOUR PRIVATE KEY</strong> (write it down!)<br>
+                    2. Copy the NFC JSON above<br>
+                    3. Open NFC Tools app → WRITE tab<br>
+                    4. Add record → Text → Paste JSON<br>
+                    5. Write to your NFC card<br>
+                    6. Give card to user (tell them PIN separately)
+                </div>
+                
+                <button class="btn" onclick="resetForm()" style="margin-top: 20px; background: #6c757d;">
+                    🗑️ Clear & Generate New
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/ethers@5.7.2/dist/ethers.umd.min.js"></script>
+    <script>
+        function generateWallet() {
+            const cardNumber = document.getElementById('cardNumber').value.trim();
+            const userPin = document.getElementById('userPin').value.trim();
+            const ensName = document.getElementById('ensName').value.trim();
+            
+            // Validation
+            if (!cardNumber) {
+                alert('Please enter a card number (e.g., 001)');
+                return;
+            }
+            
+            if (!userPin || userPin.length < 4) {
+                alert('PIN must be at least 4 digits');
+                return;
+            }
+            
+            if (!/^\d+$/.test(userPin)) {
+                alert('PIN must contain only numbers');
+                return;
+            }
+            
+            try {
+                // Generate card serial in VLG-XXX format
+                const serialNumber = `VLG-${cardNumber}`;
+                
+                // Generate random private key (32 bytes)
+                const privateKeyBytes = new Uint8Array(32);
+                crypto.getRandomValues(privateKeyBytes);
+                const privateKeyHex = Array.from(privateKeyBytes)
+                    .map(b => b.toString(16).padStart(2, '0'))
+                    .join('');
+                
+                // Use ethers.js to properly derive the Ethereum address
+                const privateKeyWith0x = '0x' + privateKeyHex;
+                const wallet = new ethers.Wallet(privateKeyWith0x);
+                const publicAddress = wallet.address;
+                
+                // Create passphrase in EXACT format app expects
+                // Format: VLG-{cardNumber}-PIN{userPin}-SECURE
+                const passphrase = `${serialNumber}-PIN${userPin}-SECURE`;
+                
+                // Encrypt the private key
+                const encryptedKey = CryptoJS.AES.encrypt(privateKeyWith0x, passphrase).toString();
+                
+                // Create NFC JSON with EXACT field names app expects
+                const nfcData = {
+                    v: "1.0",
+                    net: "ethereum",
+                    addr: publicAddress,
+                    ens: ensName || null,
+                    ekey: encryptedKey,
+                    date: new Date().toISOString().split('T')[0],
+                    serial: serialNumber
+                };
+                
+                // Display results
+                document.getElementById('serialNumber').textContent = serialNumber;
+                document.getElementById('publicAddress').textContent = publicAddress;
+                document.getElementById('privateKey').textContent = privateKeyWith0x;
+                document.getElementById('encryptedKey').textContent = encryptedKey;
+                document.getElementById('nfcJson').textContent = JSON.stringify(nfcData, null, 2);
+                
+                // Show results
+                document.getElementById('results').classList.add('show');
+                
+                // Scroll to results
+                document.getElementById('results').scrollIntoView({ behavior: 'smooth' });
+                
+                console.log('✅ Wallet generated successfully');
+                console.log('Serial:', serialNumber);
+                console.log('Address:', publicAddress);
+                
+            } catch (error) {
+                alert('Error generating wallet: ' + error.message);
+                console.error(error);
+            }
+        }
+        
+        function copyText(elementId) {
+            const text = document.getElementById(elementId).textContent;
+            navigator.clipboard.writeText(text).then(() => {
+                const btn = event.target;
+                const originalText = btn.textContent;
+                btn.textContent = '✅ Copied!';
+                setTimeout(() => {
+                    btn.textContent = originalText;
+                }, 2000);
+            }).catch(err => {
+                alert('Failed to copy. Please select and copy manually.');
+                console.error('Copy failed:', err);
+            });
+        }
+        
+        function resetForm() {
+            if (confirm('⚠️ Clear this wallet data? Make sure you saved your private key first!')) {
+                document.getElementById('results').classList.remove('show');
+                document.getElementById('cardNumber').value = '';
+                document.getElementById('userPin').value = '';
+                document.getElementById('ensName').value = '';
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+        }
+        
+        // Warn before leaving if wallet is generated
+        window.addEventListener('beforeunload', function(e) {
+            if (document.getElementById('results').classList.contains('show')) {
+                e.preventDefault();
+                e.returnValue = 'You have unsaved wallet data. Make sure you saved your private key!';
+                return e.returnValue;
+            }
+        });
+    </script>
+</body>
+</html>
