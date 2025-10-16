@@ -1,0 +1,125 @@
+# Changelog
+
+All notable changes to Village Wallet will be documented in this file.
+
+The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
+and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+
+## [2.0.0] - 2025-10-16
+
+### 🎉 Major Release - Multi-Token Support
+
+### Added
+- **Multi-Token Support**: USDT, USDC, DAI on all networks
+- **3 New Networks**: Base, Optimism, BNB Chain (total: 6 networks)
+- **Token Selector UI**: Choose between native tokens and stablecoins
+- **USD Price Display**: Shows approximate USD value for amounts
+- **Fallback RPC System**: Automatic failover for network connections
+- **Network Status Indicator**: Green/red dot showing connection status
+- **Network Badges**: Visual ticker badges showing current network
+- **ERC-20 Token Support**: Full implementation for token transfers
+- **Token Balance Checking**: View balances for any supported token
+- **Chain IDs**: Proper chain identification for all networks
+
+### Changed
+- **Dark Mode Theme**: Complete redesign with navy + purple palette
+- **Improved Error Handling**: Better NFC and network error messages
+- **Settings UI**: Cleaner layout with better organization
+- **Balance Screen**: Now shows selected token balance
+- **Payment Flow**: Supports both native and ERC-20 tokens
+
+### Fixed
+- **Arbitrum Connection**: Updated RPC endpoint for better reliability
+- **NFC Initialization**: App no longer crashes if NFC unavailable
+- **Network Switching**: Smoother transitions between networks
+- **Gas Estimation**: Accurate gas calculations for token transfers
+- **Scrolling Issues**: Balance screen now fully scrollable
+
+### Removed
+- Test banner (production ready)
+- Redundant network code
+- Debug console logs
+
+---
+
+## [1.0.0] - 2025-09-15
+
+### 🚀 Initial Release
+
+### Added
+- **NFC Card Support**: Read and write to NFC cards
+- **3 Networks**: Polygon, Arbitrum, Ethereum
+- **PIN Encryption**: Secure AES-256 encryption
+- **ENS Support**: Use .eth names for addresses
+- **Balance Checking**: View card balances
+- **Payment Processing**: Merchant payment workflow
+- **Network Switching**: Change between Polygon/Arbitrum/Ethereum
+- **Flexible Serial Numbers**: Accept any card serial format
+- **Settings Screen**: Configure merchant address and network
+
+### Security
+- AES-256 encryption for private keys
+- PIN-based authentication
+- No server-side key storage
+- Keys cleared from memory after use
+
+---
+
+## [Unreleased]
+
+### Planned for v2.1
+- [ ] Live price API integration (CoinGecko)
+- [ ] Transaction history viewer
+- [ ] QR code generation
+- [ ] QR code scanning
+- [ ] Biometric authentication
+- [ ] Receipt export
+
+### Planned for v2.2
+- [ ] More tokens (WETH, WBTC, LINK, etc.)
+- [ ] Custom token addition
+- [ ] Token swap integration
+- [ ] Address book
+
+### Planned for v3.0
+- [ ] iOS version
+- [ ] Light mode theme
+- [ ] Multi-language support
+- [ ] Backup/restore functionality
+- [ ] Hardware wallet support
+
+---
+
+## Version History
+
+- **v2.0.0** - Multi-token support (current)
+- **v1.0.0** - Initial release
+
+---
+
+## Migration Guide
+
+### Upgrading from v1.0 to v2.0
+
+**What's Changed:**
+- Token selection now required for payments
+- Default token is "native" (same as v1.0 behavior)
+- All existing cards work without changes
+- Settings have new token selector
+
+**Breaking Changes:**
+- None - fully backward compatible!
+
+**New Features to Try:**
+1. Go to "Receive Payment"
+2. See token selector: [MATIC] [USDT] [USDC] [DAI]
+3. Select USDT
+4. Enter amount - see USD estimate!
+
+---
+
+## Support
+
+For issues, feature requests, or questions:
+- **GitHub Issues**: https://github.com/satoshistackalotto/VillageWallet/issues
+- **Twitter**: @stacklotto
