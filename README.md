@@ -8,6 +8,13 @@
 [![Downloads](https://img.shields.io/github/downloads/satoshistackalotto/village-wallet/total)](https://github.com/satoshistackalotto/village-wallet/releases)
 [![Stars](https://img.shields.io/github/stars/satoshistackalotto/village-wallet)](https://github.com/satoshistackalotto/village-wallet/stargazers)
 
+## 📱 Screenshots
+
+<p align="center">
+  <img src="screenshots/home.png" width="250" />
+  <img src="screenshots/payment.png" width="250" />
+  <img src="screenshots/balance.jpg" width="250" />
+</p>
 
 ## ✨ Features
 
