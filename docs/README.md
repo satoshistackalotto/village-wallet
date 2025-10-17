@@ -139,7 +139,7 @@ Want to add a network? See [Contributing](#-contributing)
 - ⚠️ Start with small amounts for testing
 
 ### Security Audit
-We welcome security researchers to audit our code. Found a vulnerability? Please email: security@villagewallet.com
+We welcome security researchers to audit our code. Found a vulnerability? Please email: security@village-wallet.com
 
 ---
 
