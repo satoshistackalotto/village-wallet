@@ -304,11 +304,11 @@ Full specification: [NFC Format Specification](https://github.com/satoshistackal
 
 ## 📚 Documentation
 
-- [User Guide](https://village-wallet/docs.html) - How to use Village Wallet
-- [FAQ](https://village-wallet/faq.html) - Common questions and answers
-- [Fork Guide](village-wallet/village-wallet-files/docs/FORK-GUIDE.md) - Customize for your needs
-- [NFC Format Spec](village-wallet-files/docs/NFC-FORMAT-SPEC.md) - Card format details
-- [API Documentation](village-wallet-files/docs/API.md) - For developers
+- [User Guide](docs/index.html) - How to use Village Wallet
+- [FAQ](docs/FAQ.md) - Common questions and answers
+- [Fork Guide](docs/FORK-GUIDE.md) - Customize for your needs
+- [NFC Format Spec](docs/NFC-FORMAT-SPEC.md) - Card format details
+- [API Documentation](docs/API.md) - For developers
 
 ---
 
