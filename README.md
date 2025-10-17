@@ -574,7 +574,7 @@ This software is provided "as is", without warranty of any kind, express or impl
 
 **Made with ❤️ for the crypto community**
 
-[Download](https://github.com/satoshistackalotto/village-wallet/releases/latest) • [Website](https://village-wallet.com) • [Discord](https://discord.com/channels/1427941983544147980) • [Twitter](https://x.com/stack_lotto) • [Donate](https://github.com/sponsors/satoshistackalotto)
+[Download](https://github.com/satoshistackalotto/village-wallet/releases/latest) • [Website](https://village-wallet.com) • [Discord](https://discord.gg/ew3y3N6hmm) • [Twitter](https://x.com/stack_lotto) • [Donate](https://github.com/sponsors/satoshistackalotto)
 
 **⭐ Star us on GitHub — it helps!**
 
