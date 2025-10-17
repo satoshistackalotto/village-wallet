@@ -82,7 +82,7 @@ Village Wallet turns any NFC card into a secure crypto wallet. It's like a hardw
 
 3. **Write to NFC card**
    - Copy the JSON output
-   - Use [NFC Tools](https://play.google.com/store/apps/details?id=com.wakdev.wdnfc) app
+   - Use [NFC Tools](docs/NFC-FORMAT-SPEC.md) app
    - Write → Add Record → Text → Paste JSON
 
 4. **Use your card**
@@ -128,7 +128,7 @@ cd android
 # android/app/build/outputs/apk/release/app-release.apk
 ```
 
-See [Fork Guide](https://github.com/satoshistackalotto/village-wallet/blob/main/village%20wallet%20files/docs/Fork%20Guide.md) for detailed customization instructions.
+See [Fork Guide](docs/FORK-GUIDE.md) for detailed customization instructions.
 
 ---
 
@@ -467,7 +467,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 - [Ledger Unplugged](https://bitcoingarden.org/ledger-unplugged-contactless-bitcoin-wallet/) (discontinued, RIP)
 - [Satscard](https://satscard.com/) - Bitcoin NFC cards
-- [Coinb.in](https://coinb.in/) - Bitcoin transaction builder
 - Physical crypto notes and paper wallets
 - [xEth-wallet-for-NFC](https://github.com/Omodaka9375/xEth-wallet-for-NFC) - Java/Solidity NFC implementation
 
