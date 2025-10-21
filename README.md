@@ -532,7 +532,6 @@ This software is provided "as is", without warranty of any kind, express or impl
 
 ### Wallet Generation Tools
 - [MyEtherWallet](https://www.myetherwallet.com/) - Ethereum wallet interface
-- [Coinb.in](https://coinb.in/) - Bitcoin transaction builder
 - [Bitaddress.org](https://bitaddress.org/) - Paper wallet generator (BIP38)
 
 ### NFC Resources
