@@ -15,7 +15,7 @@
 // ✅ MULTI-LANGUAGE SUPPORT (EN, JP, FR, DE, ES, EL)
 // ✅ NEW v2.4.8: ETHERSCAN API V2 - 80% cheaper gas (0.37 gwei vs 1.8 gwei)
 // ✅ UPDATED: Language selection moved to end of settings
-
+import 'react-native-get-random-values';
 import React, { useState, useEffect } from 'react';
 import {
   View,
@@ -948,7 +948,7 @@ export default function VillageWallet() {
           { text: t.ok, onPress: () => {
             Alert.prompt(t.enterPin, t.enterPinDigits, [
               { text: t.cancel, style: 'cancel', onPress: () => setLoading(false) },
-              { text: t.ok, onPress: async (pinInput) => {
+              { text: t.ok, onPress: async (pinInput: string | undefined) => {
                 try {
                   const privateKey = decryptPrivateKey(card.encPrivKey || card.ekey, pinInput || '', card.serial);
                   const wallet = new ethers.Wallet(privateKey);
@@ -1225,7 +1225,7 @@ export default function VillageWallet() {
           { text: t.ok, onPress: () => {
             Alert.prompt(t.enterPin, t.enterPinDigits, [
               { text: t.cancel, style: 'cancel' },
-              { text: t.ok, onPress: async (pinInput) => {
+              { text: t.ok, onPress: async (pinInput: string | undefined) => {
                 try {
                   setLoading(true);
                   const privateKey = decryptPrivateKey(card.encPrivKey || card.ekey, pinInput || '', card.serial);
