@@ -223,7 +223,6 @@ See [Fork Guide](docs/FORK-GUIDE.md) for detailed customization instructions.
 #### What Users Should Do:
 - ⚠️ **Keep PIN secret** (like a bank card)
 - ⚠️ **Save private key offline** (for backup/recovery)
-- ⚠️ **Don't scratch off card back** unless needed
 - ⚠️ **Start with small amounts** for testing
 - ⚠️ **Use stablecoins** for predictable pricing
 - ⚠️ **Keep native tokens** for gas fees (ETH, MATIC, BNB)
@@ -254,6 +253,9 @@ See [Fork Guide](docs/FORK-GUIDE.md) for detailed customization instructions.
 - ETH (Ethereum)
 - MATIC (Polygon)
 - BNB (Binance Coin)
+- ETH (Arbitrum)
+- ETH (Base)
+- BSC (BNB Chain)
 
 Want to add a network or token? See [Contributing](#-contributing)
 
@@ -417,9 +419,9 @@ Village Wallet is free and open source. If you find it useful, consider supporti
 - ⭐ **Star this repo** - Helps with visibility and motivation
 - 💬 **Spread the word** - Tell your crypto friends
 - 💰 **Donate crypto:**
-  - Ethereum: `0xYourAddress`
-  - Polygon: `0xYourAddress` (same address, cheaper fees!)
-  - Arbitrum: `0xYourAddress`
+  - Ethereum: `stems.eth`
+  - Polygon: `stems.eth` (same address, cheaper fees!)
+  - Arbitrum: `stems.eth`
 - 🎁 **GitHub Sponsors:** [Sponsor us](https://github.com/sponsors/satoshistackalotto)
 
 ### Where Your Support Goes
