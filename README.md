@@ -57,6 +57,16 @@ This release addresses 12 security vulnerabilities identified in a comprehensive
 
 ---
 
+## 📱 Screenshots
+
+<p align="center">
+  <img src="screenshots/home.png" width="250" alt="Home Screen" />
+  <img src="screenshots/payment.png" width="250" alt="Payment Screen" />
+  <img src="screenshots/balance.jpg" width="250" alt="Balance Screen" />
+</p>
+
+---
+
 ## 📱 Download
 
 - **[Android APK](https://github.com/satoshistackalotto/village-wallet/releases/latest)** — Download and install directly
