@@ -18,7 +18,7 @@ Algorithm: AES-256-CBC (CryptoJS default)
 {
   "v": "1.0",
   "serial": "VLG-001",
-  "addr": "0x742d35Cc6634C0532925a3b844Bc9e7595f0bEB2",
+  "addr": "0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045",
   "ekey": "U2FsdGVkX1+vupppqqWvj3mbjPXYq...",
   "ens": "user.village.eth"
 }
