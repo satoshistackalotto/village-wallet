@@ -211,7 +211,6 @@ The entire codebase is open source under MIT license. To verify the security cla
 3. Search for `secureKeyHandler.current.clearKey()` — confirms key cleanup in every code path
 4. Search for `wallet: connectedWallet` — should return zero results (no wallet in state)
 5. Search for `pendingNonce > confirmedNonce` — confirms nonce check
-6. Search for `GQ6AT1V31NFUVGJ26Y6C2SMS8776GZR26E` — should return zero results (no hardcoded key)
 7. Search for `console.log` or `console.error` — should return zero results (replaced with secureLog)
 8. Search for `ENS only exists on Ethereum mainnet` — confirms ENS fix
 9. Search for `MAX_PIN_ATTEMPTS` — confirms rate limiting
